@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Viternus.Web</RootNamespace>
+    <AssemblyName>Viternus.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Krystalware.SlickUpload, Version=5.5.2.23280, Culture=neutral, PublicKeyToken=c855092fa21812dd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibraries\Krystalware.SlickUpload.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ServiceHosting.ServiceRuntime, Version=0.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StorageClient, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibraries\StorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Silverlight, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InnerCircleController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Filters\EmailErrorAttribute.cs" />
+    <Compile Include="Filters\LogErrorAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AccountRegisterViewModel.cs" />
+    <Compile Include="ViewModels\InnerCircleChooseViewModel.cs" />
+    <Compile Include="ViewModels\InnerCircleMemberViewModel.cs" />
+    <Compile Include="ViewModels\InnerCircleNumTrusteesViewModel.cs" />
+    <Compile Include="ViewModels\MessageDisplayViewModel.cs" />
+    <Compile Include="ViewModels\MessageEditViewModel.cs" />
+    <Compile Include="ViewModels\MessageRecipientDisplayViewModel.cs" />
+    <Compile Include="ViewModels\VideoUploadFilesViewModel.cs" />
+    <Compile Include="Web References\com.ssdmf.websvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\add-recipient.gif" />
+    <Content Include="Content\images\all-message.gif" />
+    <Content Include="Content\images\arrow.gif" />
+    <Content Include="Content\images\bg-corn.gif" />
+    <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\border.gif" />
+    <Content Include="Content\images\bottom-bg.gif" />
+    <Content Include="Content\images\bottom-part.gif" />
+    <Content Include="Content\images\bottom-side.gif" />
+    <Content Include="Content\images\bottom.gif" />
+    <Content Include="Content\images\box-bg.gif" />
+    <Content Include="Content\images\box.gif" />
+    <Content Include="Content\images\bullet.gif" />
+    <Content Include="Content\images\button-bg.gif" />
+    <Content Include="Content\images\calendar.gif" />
+    <Content Include="Content\images\change-password.gif" />
+    <Content Include="Content\images\clock.gif" />
+    <Content Include="Content\images\continue.gif" />
+    <Content Include="Content\images\couple.jpg" />
+    <Content Include="Content\images\create-message.gif" />
+    <Content Include="Content\images\create.gif" />
+    <Content Include="Content\images\cross.gif" />
+    <Content Include="Content\images\death.gif" />
+    <Content Include="Content\images\delete.gif" />
+    <Content Include="Content\images\edit.gif" />
+    <Content Include="Content\images\elderlyCoupleLaughing.png" />
+    <Content Include="Content\images\footer-bottom.gif" />
+    <Content Include="Content\images\footer-logo.jpg" />
+    <Content Include="Content\images\footer-top.gif" />
+    <Content Include="Content\images\heading-bg.gif" />
+    <Content Include="Content\images\heading.gif" />
+    <Content Include="Content\images\incap-button.gif" />
+    <Content Include="Content\images\innercircle-hover.gif" />
+    <Content Include="Content\images\innercircle.gif" />
+    <Content Include="Content\images\left-bg.gif" />
+    <Content Include="Content\images\left-corn.gif" />
+    <Content Include="Content\images\left-hover.gif" />
+    <Content Include="Content\images\login-bottom.gif" />
+    <Content Include="Content\images\login-top.gif" />
+    <Content Include="Content\images\login.gif" />
+    <Content Include="Content\images\message-box.gif" />
+    <Content Include="Content\images\message-hover.gif" />
+    <Content Include="Content\images\message.gif" />
+    <Content Include="Content\images\models.jpg" />
+    <Content Include="Content\images\page.gif" />
+    <Content Include="Content\images\preview.gif" />
+    <Content Include="Content\images\right-add.gif" />
+    <Content Include="Content\images\right-bottom.gif" />
+    <Content Include="Content\images\right-corn.gif" />
+    <Content Include="Content\images\right-heading.gif" />
+    <Content Include="Content\images\right-top.gif" />
+    <Content Include="Content\images\sample-video.jpg" />
+    <Content Include="Content\images\sample.jpg" />
+    <Content Include="Content\images\sample2.jpg" />
+    <Content Include="Content\images\sample3.jpg" />
+    <Content Include="Content\images\sample4.jpg" />
+    <Content Include="Content\images\sample5.jpg" />
+    <Content Include="Content\images\save.gif" />
+    <Content Include="Content\images\screenshot.JPG" />
+    <Content Include="Content\images\security.gif" />
+    <Content Include="Content\images\star.gif" />
+    <Content Include="Content\images\submit.gif" />
+    <Content Include="Content\images\text-bg.png" />
+    <Content Include="Content\images\top-part.gif" />
+    <Content Include="Content\images\top-side.gif" />
+    <Content Include="Content\images\top.gif" />
+    <Content Include="Content\images\trustee-hover.gif" />
+    <Content Include="Content\images\trustee.gif" />
+    <Content Include="Content\images\update-account-hover.gif" />
+    <Content Include="Content\images\update-account.gif" />
+    <Content Include="Content\images\upload-button.gif" />
+    <Content Include="Content\images\upload-hover.gif" />
+    <Content Include="Content\images\upload-video.gif" />
+    <Content Include="Content\images\upload.gif" />
+    <Content Include="Content\images\video-hover.gif" />
+    <Content Include="Content\images\video.gif" />
+    <Content Include="Content\images\video.jpg" />
+    <Content Include="Content\images\watch.gif" />
+    <Content Include="Content\images\person-hover.gif" />
+    <Content Include="Content\images\person.gif" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="VideoPlayerM.xap" />
+    <Content Include="Views\Account\Edit.aspx" />
+    <Content Include="Views\Home\ContactUs.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Message\AddRecipients.aspx" />
+    <Content Include="Views\Message\Create.aspx" />
+    <Content Include="Views\Message\Delete.aspx" />
+    <Content Include="Views\Message\Deleted.aspx" />
+    <Content Include="Views\Message\DeliveryAdmin.aspx" />
+    <Content Include="Views\Message\Details.aspx" />
+    <Content Include="Views\Message\Edit.aspx" />
+    <Content Include="Views\Message\Index.aspx" />
+    <Content Include="Views\Message\MessageDisplay.ascx" />
+    <Content Include="Views\Message\MessageForm.ascx" />
+    <Content Include="Views\Message\NotFound.aspx" />
+    <Content Include="Views\Message\ViewMessageFromUrl.aspx" />
+    <Content Include="Views\Shared\LeftAd.ascx" />
+    <Content Include="Views\Video\Delete.aspx" />
+    <Content Include="Views\Video\Deleted.aspx" />
+    <Content Include="Views\Video\Edit.aspx" />
+    <Content Include="Views\Video\Index.aspx" />
+    <Content Include="Views\Shared\VideoPlayer.ascx" />
+    <None Include="Web References\com.ssdmf.websvc\dmfwbsvc.disco" />
+    <Content Include="Views\Video\Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Viternus.BlobStorage\Viternus.BlobStorage\ServiceConfiguration.cscfg">
+      <Link>ServiceConfiguration.cscfg</Link>
+    </None>
+    <None Include="..\Viternus.BlobStorage\Viternus.BlobStorage\ServiceDefinition.csdef">
+      <Link>ServiceDefinition.csdef</Link>
+    </None>
+    <None Include="Krystalware.SlickUpload.xml.lic" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Content\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Content\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Content\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Content\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Content\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Content\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Content\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Content\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="Content\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\blitzer\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="Content\images\1per.jpg" />
+    <Content Include="Content\images\1perSelected.jpg" />
+    <Content Include="Content\images\3ppl.jpg" />
+    <Content Include="Content\images\3pplSelected.jpg" />
+    <Content Include="Content\images\5ppl.jpg" />
+    <Content Include="Content\images\5pplSelected.jpg" />
+    <Content Include="Content\images\add-space2.gif" />
+    <Content Include="Content\images\bottom-corn.gif" />
+    <Content Include="Content\images\bottom-tool-tip.jpg" />
+    <Content Include="Content\images\botton-bg.gif" />
+    <Content Include="Content\images\bx-bg.gif" />
+    <Content Include="Content\images\change-password-hover.gif" />
+    <Content Include="Content\images\change-password-ico.gif" />
+    <Content Include="Content\images\checkout.jpg" />
+    <Content Include="Content\images\EditPreview.gif" />
+    <Content Include="Content\images\final.jpg" />
+    <Content Include="Content\images\Freetrial-without-text.gif" />
+    <Content Include="Content\images\information.jpg" />
+    <Content Include="Content\images\inner.jpg" />
+    <Content Include="Content\images\left-add1.gif" />
+    <Content Include="Content\images\left-add2.gif" />
+    <Content Include="Content\images\left-add3.gif" />
+    <Content Include="Content\images\left-add4.gif" />
+    <Content Include="Content\images\LogoBlue.jpg" />
+    <Content Include="Content\images\models2.jpg" />
+    <Content Include="Content\images\models3.jpg" />
+    <Content Include="Content\images\models4.jpg" />
+    <Content Include="Content\images\models5.jpg" />
+    <Content Include="Content\images\numTrusteesIcon.jpg" />
+    <Content Include="Content\images\right-add1.gif" />
+    <Content Include="Content\images\right-add2.gif" />
+    <Content Include="Content\images\right-add3.gif" />
+    <Content Include="Content\images\right-add4.gif" />
+    <Content Include="Content\images\right-add5.gif" />
+    <Content Include="Content\images\sign.gif" />
+    <Content Include="Content\images\tool-tip-bg.jpg" />
+    <Content Include="Content\images\top-corn.gif" />
+    <Content Include="Content\images\top-corn.jpg" />
+    <Content Include="Content\images\top-tool-tip.jpg" />
+    <Content Include="Content\images\UpgradeButton.jpg" />
+    <Content Include="Scripts\jquery-ui-1.8rc1.custom.min.js" />
+    <Content Include="Scripts\jquery.timers-1.2.js" />
+    <Content Include="Scripts\Viternus.js" />
+    <Content Include="Views\Home\Dashboard.aspx" />
+    <Content Include="Views\Home\FAQ.aspx" />
+    <Content Include="Views\Home\Pricing.aspx" />
+    <Content Include="Views\Home\PrivacyPolicy.aspx" />
+    <Content Include="Views\Home\Subscribe.aspx" />
+    <Content Include="Views\Home\TermsOfService.aspx" />
+    <Content Include="Views\Home\VideoWillsWhitePaper.aspx" />
+    <Content Include="Views\InnerCircle\Done.aspx" />
+    <Content Include="Views\InnerCircle\Explain.aspx" />
+    <Content Include="Views\InnerCircle\Choose.aspx" />
+    <Content Include="Views\InnerCircle\Member.aspx" />
+    <Content Include="Views\InnerCircle\NumTrustees.aspx" />
+    <Content Include="Views\Shared\RightProgress.ascx" />
+    <Content Include="Views\Message\MessageHelp.ascx" />
+    <Content Include="Views\Payment\Card.aspx" />
+    <Content Include="Views\Payment\Done.aspx" />
+    <Content Include="Views\Shared\PasswordStrengthDialog.ascx" />
+    <Content Include="Views\Shared\RightAd.ascx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\LoggedIn.Master" />
+    <Content Include="Views\Shared\UserSearchForm.ascx" />
+    <Content Include="Views\Video\UploadPending.aspx" />
+    <Content Include="Views\Video\NotFound.aspx" />
+    <Content Include="Views\Video\UploadFiles.aspx" />
+    <Content Include="xd_receiver.htm" />
+    <None Include="Web References\com.ssdmf.websvc\dmfwbsvc.wsdl" />
+    <None Include="Web References\com.ssdmf.websvc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Viternus.Data\Viternus.Data.csproj">
+      <Project>{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}</Project>
+      <Name>Viternus.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viternus.DeliveryAutomation\Viternus.DeliveryAutomation.csproj">
+      <Project>{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}</Project>
+      <Name>Viternus.DeliveryAutomation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viternus.Membership\Viternus.Membership.csproj">
+      <Project>{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}</Project>
+      <Name>Viternus.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viternus.Service\Viternus.Service.csproj">
+      <Project>{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}</Project>
+      <Name>Viternus.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://websvc.ssdmf.com/websvc/dmfwbsvc.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.ssdmf.websvc\</RelPath>
+      <UpdateFromURL>http://websvc.ssdmf.com/websvc/dmfwbsvc.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Viternus_Web_com_ssdmf_websvc_DMFwbsvcClass</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59879</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
