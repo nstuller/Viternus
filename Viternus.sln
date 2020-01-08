@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.Data", "Viternus.Data\Viternus.Data.csproj", "{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.Tests", "Viternus.Tests\Viternus.Tests.csproj", "{677D1510-3521-4986-9C91-90FCDCD1A32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.Web", "Viternus.Web\Viternus.Web.csproj", "{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.DeliveryAutomation", "Viternus.DeliveryAutomation\Viternus.DeliveryAutomation.csproj", "{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.Membership", "Viternus.Membership\Viternus.Membership.csproj", "{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viternus.Service", "Viternus.Service\Viternus.Service.csproj", "{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4BB9C1-DA57-404E-8D52-4FE2769989FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677D1510-3521-4986-9C91-90FCDCD1A32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677D1510-3521-4986-9C91-90FCDCD1A32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677D1510-3521-4986-9C91-90FCDCD1A32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677D1510-3521-4986-9C91-90FCDCD1A32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDE1707-EFD3-452B-99B8-F6C05A6B1D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8F99D0-5F3C-4684-8F8D-536A4FDAAF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D75EC127-A22B-44CF-8E8F-8DC4A9B05227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822ABC95-CF7E-48D3-BAA4-F631AEF2EAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
