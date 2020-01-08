@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ViternusModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ViternusModelStoreContainer">
+          <EntitySet Name="Address" EntityType="ViternusModel.Store.Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AppUser" EntityType="ViternusModel.Store.AppUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AppUserRole" EntityType="ViternusModel.Store.AppUserRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ErrorLog" EntityType="ViternusModel.Store.ErrorLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventType" EntityType="ViternusModel.Store.EventType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InnerCircle" EntityType="ViternusModel.Store.InnerCircle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InnerCircleAction" EntityType="ViternusModel.Store.InnerCircleAction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JournalPrompt" EntityType="ViternusModel.Store.JournalPrompt" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Message" EntityType="ViternusModel.Store.Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageRecipient" EntityType="ViternusModel.Store.MessageRecipient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageType" EntityType="ViternusModel.Store.MessageType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Notification" EntityType="ViternusModel.Store.Notification" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Profile" EntityType="ViternusModel.Store.Profile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="ViternusModel.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subscription" EntityType="ViternusModel.Store.Subscription" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Video" EntityType="ViternusModel.Store.Video" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_AppUser_Profile" Association="ViternusModel.Store.FK_AppUser_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="AppUser" EntitySet="AppUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AppUserRole_AppUser" Association="ViternusModel.Store.FK_AppUserRole_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="AppUserRole" EntitySet="AppUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AppUserRole_Role" Association="ViternusModel.Store.FK_AppUserRole_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="AppUserRole" EntitySet="AppUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ErrorLog_AppUser" Association="ViternusModel.Store.FK_ErrorLog_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="ErrorLog" EntitySet="ErrorLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircle_AppUser" Association="ViternusModel.Store.FK_InnerCircle_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircle_Profile" Association="ViternusModel.Store.FK_InnerCircle_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircleAction_EventType" Association="ViternusModel.Store.FK_InnerCircleAction_EventType">
+            <End Role="EventType" EntitySet="EventType" />
+            <End Role="InnerCircleAction" EntitySet="InnerCircleAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircleAction_InnerCircle" Association="ViternusModel.Store.FK_InnerCircleAction_InnerCircle">
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+            <End Role="InnerCircleAction" EntitySet="InnerCircleAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_AppUser" Association="ViternusModel.Store.FK_Message_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_EventType" Association="ViternusModel.Store.FK_Message_EventType">
+            <End Role="EventType" EntitySet="EventType" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageType" Association="ViternusModel.Store.FK_Message_MessageType">
+            <End Role="MessageType" EntitySet="MessageType" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Video" Association="ViternusModel.Store.FK_Message_Video">
+            <End Role="Video" EntitySet="Video" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="ViternusModel.Store.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Profile" Association="ViternusModel.Store.FK_MessageRecipient_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_AppUser" Association="ViternusModel.Store.FK_Notification_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Profile_Address" Association="ViternusModel.Store.FK_Profile_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Profile" EntitySet="Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Video_AppUser" Association="ViternusModel.Store.FK_Video_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Video" EntitySet="Video" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StreetLine1" Type="nvarchar" MaxLength="80" />
+          <Property Name="StreetLine2" Type="nvarchar" MaxLength="80" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="smallint" />
+          <Property Name="Zip" Type="nchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProfileId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="MobilePin" Type="nvarchar" MaxLength="16" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="128" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="AgreedToTOS" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLogOnDate" Type="datetime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAttemptDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptDate" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="AppUserRole">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="StackTrace" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="InnerCircle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TrusteeProfileId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NotificationSentDate" Type="datetime" />
+          <Property Name="AcceptedResponsibility" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InnerCircleAction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="InnerCircleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EventTypeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EventDate" Type="datetime" Nullable="false" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JournalPrompt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" Nullable="false" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FromUserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MessageTypeId" Type="uniqueidentifier" />
+          <Property Name="EventTypeId" Type="uniqueidentifier" />
+          <Property Name="Title" Type="nvarchar" MaxLength="70" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="SecretQuestion" Type="nvarchar" MaxLength="100" />
+          <Property Name="SecretAnswer" Type="nvarchar" MaxLength="50" />
+          <Property Name="ScheduleDate" Type="datetime" />
+          <Property Name="SentDate" Type="datetime" />
+          <Property Name="VideoId" Type="uniqueidentifier" />
+          <Property Name="EventScheduleOffsetDays" Type="smallint" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MessageId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RecipientId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VisitedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MessageType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UserNotified" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressId" Type="uniqueidentifier" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="EmailAlternate" Type="nvarchar" MaxLength="100" />
+          <Property Name="SSN" Type="nvarchar" MaxLength="9" />
+          <Property Name="IncapacitationDate" Type="datetime" />
+          <Property Name="DeceasedDate" Type="datetime" />
+          <Property Name="FacebookId" Type="nvarchar" MaxLength="25" />
+          <Property Name="NumberOfTrustees" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProspectName" Type="nvarchar" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Feedback" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Path" Type="varchar" MaxLength="600" />
+          <Property Name="ThumbnailPath" Type="varchar" MaxLength="600" />
+          <Property Name="StartProcessingDate" Type="datetime" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="UploadSize" Type="bigint" />
+          <Property Name="FinalSize" Type="bigint" />
+          <Property Name="OriginalFileFormat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_AppUser_Profile">
+          <End Role="Profile" Type="ViternusModel.Store.Profile" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AppUser">
+              <PropertyRef Name="ProfileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AppUserRole_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AppUserRole" Type="ViternusModel.Store.AppUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AppUserRole">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AppUserRole_Role">
+          <End Role="Role" Type="ViternusModel.Store.Role" Multiplicity="1" />
+          <End Role="AppUserRole" Type="ViternusModel.Store.AppUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AppUserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ErrorLog_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="0..1" />
+          <End Role="ErrorLog" Type="ViternusModel.Store.ErrorLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ErrorLog">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerCircle_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircle" Type="ViternusModel.Store.InnerCircle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerCircle">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerCircle_Profile">
+          <End Role="Profile" Type="ViternusModel.Store.Profile" Multiplicity="1" />
+          <End Role="InnerCircle" Type="ViternusModel.Store.InnerCircle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerCircle">
+              <PropertyRef Name="TrusteeProfileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerCircleAction_EventType">
+          <End Role="EventType" Type="ViternusModel.Store.EventType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircleAction" Type="ViternusModel.Store.InnerCircleAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerCircleAction">
+              <PropertyRef Name="EventTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerCircleAction_InnerCircle">
+          <End Role="InnerCircle" Type="ViternusModel.Store.InnerCircle" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircleAction" Type="ViternusModel.Store.InnerCircleAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InnerCircle">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerCircleAction">
+              <PropertyRef Name="InnerCircleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="1" />
+          <End Role="Message" Type="ViternusModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="FromUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_EventType">
+          <End Role="EventType" Type="ViternusModel.Store.EventType" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="EventTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageType">
+          <End Role="MessageType" Type="ViternusModel.Store.MessageType" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_Video">
+          <End Role="Video" Type="ViternusModel.Store.Video" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Video">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="VideoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="ViternusModel.Store.Message" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageRecipient" Type="ViternusModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Profile">
+          <End Role="Profile" Type="ViternusModel.Store.Profile" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageRecipient" Type="ViternusModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="RecipientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Notification" Type="ViternusModel.Store.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Profile_Address">
+          <End Role="Address" Type="ViternusModel.Store.Address" Multiplicity="0..1" />
+          <End Role="Profile" Type="ViternusModel.Store.Profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Profile">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Video_AppUser">
+          <End Role="AppUser" Type="ViternusModel.Store.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Video" Type="ViternusModel.Store.Video" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AppUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Video">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ViternusModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="ViternusEntities">
+          <EntitySet Name="Address" EntityType="ViternusModel.Address" />
+          <EntitySet Name="AppUser" EntityType="ViternusModel.AppUser" />
+          <EntitySet Name="ErrorLog" EntityType="ViternusModel.ErrorLog" />
+          <EntitySet Name="EventType" EntityType="ViternusModel.EventType" />
+          <EntitySet Name="InnerCircle" EntityType="ViternusModel.InnerCircle" />
+          <EntitySet Name="InnerCircleAction" EntityType="ViternusModel.InnerCircleAction" />
+          <EntitySet Name="JournalPrompt" EntityType="ViternusModel.JournalPrompt" />
+          <EntitySet Name="Message" EntityType="ViternusModel.Message" />
+          <EntitySet Name="MessageRecipient" EntityType="ViternusModel.MessageRecipient" />
+          <EntitySet Name="MessageType" EntityType="ViternusModel.MessageType" />
+          <EntitySet Name="Notification" EntityType="ViternusModel.Notification" />
+          <EntitySet Name="Profile" EntityType="ViternusModel.Profile" />
+          <EntitySet Name="Role" EntityType="ViternusModel.Role" />
+          <EntitySet Name="Subscription" EntityType="ViternusModel.Subscription" />
+          <EntitySet Name="Video" EntityType="ViternusModel.Video" />
+          <AssociationSet Name="FK_Profile_Address" Association="ViternusModel.FK_Profile_Address">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Profile" EntitySet="Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AppUser_Profile" Association="ViternusModel.FK_AppUser_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="AppUser" EntitySet="AppUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ErrorLog_AppUser" Association="ViternusModel.FK_ErrorLog_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="ErrorLog" EntitySet="ErrorLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircle_AppUser" Association="ViternusModel.FK_InnerCircle_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_AppUser" Association="ViternusModel.FK_Message_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_AppUser" Association="ViternusModel.FK_Notification_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Video_AppUser" Association="ViternusModel.FK_Video_AppUser">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Video" EntitySet="Video" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircleAction_EventType" Association="ViternusModel.FK_InnerCircleAction_EventType">
+            <End Role="EventType" EntitySet="EventType" />
+            <End Role="InnerCircleAction" EntitySet="InnerCircleAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_EventType" Association="ViternusModel.FK_Message_EventType">
+            <End Role="EventType" EntitySet="EventType" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircle_Profile" Association="ViternusModel.FK_InnerCircle_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerCircleAction_InnerCircle" Association="ViternusModel.FK_InnerCircleAction_InnerCircle">
+            <End Role="InnerCircle" EntitySet="InnerCircle" />
+            <End Role="InnerCircleAction" EntitySet="InnerCircleAction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageType" Association="ViternusModel.FK_Message_MessageType">
+            <End Role="MessageType" EntitySet="MessageType" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Video" Association="ViternusModel.FK_Message_Video">
+            <End Role="Video" EntitySet="Video" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="ViternusModel.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Profile" Association="ViternusModel.FK_MessageRecipient_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="AppUserRole" Association="ViternusModel.AppUserRole">
+            <End Role="AppUser" EntitySet="AppUser" />
+            <End Role="Role" EntitySet="Role" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="StreetLine1" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="StreetLine2" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="Int16" />
+          <Property Name="Zip" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Profile" Relationship="ViternusModel.FK_Profile_Address" FromRole="Address" ToRole="Profile" />
+        </EntityType>
+        <EntityType Name="AppUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="MobilePin" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="PasswordSalt" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="AgreedToTOS" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLogOnDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAttemptDate" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptDate" Type="DateTime" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Profile" Relationship="ViternusModel.FK_AppUser_Profile" FromRole="AppUser" ToRole="Profile" />
+          <NavigationProperty Name="ErrorLog" Relationship="ViternusModel.FK_ErrorLog_AppUser" FromRole="AppUser" ToRole="ErrorLog" />
+          <NavigationProperty Name="InnerCircle" Relationship="ViternusModel.FK_InnerCircle_AppUser" FromRole="AppUser" ToRole="InnerCircle" />
+          <NavigationProperty Name="Message" Relationship="ViternusModel.FK_Message_AppUser" FromRole="AppUser" ToRole="Message" />
+          <NavigationProperty Name="Notification" Relationship="ViternusModel.FK_Notification_AppUser" FromRole="AppUser" ToRole="Notification" />
+          <NavigationProperty Name="Video" Relationship="ViternusModel.FK_Video_AppUser" FromRole="AppUser" ToRole="Video" />
+          <NavigationProperty Name="Role" Relationship="ViternusModel.AppUserRole" FromRole="AppUser" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="StackTrace" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_ErrorLog_AppUser" FromRole="ErrorLog" ToRole="AppUser" />
+        </EntityType>
+        <EntityType Name="EventType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="InnerCircleAction" Relationship="ViternusModel.FK_InnerCircleAction_EventType" FromRole="EventType" ToRole="InnerCircleAction" />
+          <NavigationProperty Name="Message" Relationship="ViternusModel.FK_Message_EventType" FromRole="EventType" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="InnerCircle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="NotificationSentDate" Type="DateTime" />
+          <Property Name="AcceptedResponsibility" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_InnerCircle_AppUser" FromRole="InnerCircle" ToRole="AppUser" />
+          <NavigationProperty Name="Profile" Relationship="ViternusModel.FK_InnerCircle_Profile" FromRole="InnerCircle" ToRole="Profile" />
+          <NavigationProperty Name="InnerCircleAction" Relationship="ViternusModel.FK_InnerCircleAction_InnerCircle" FromRole="InnerCircle" ToRole="InnerCircleAction" />
+        </EntityType>
+        <EntityType Name="InnerCircleAction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="EventDate" Type="DateTime" Nullable="false" />
+          <Property Name="ActionDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="EventType" Relationship="ViternusModel.FK_InnerCircleAction_EventType" FromRole="InnerCircleAction" ToRole="EventType" />
+          <NavigationProperty Name="InnerCircle" Relationship="ViternusModel.FK_InnerCircleAction_InnerCircle" FromRole="InnerCircleAction" ToRole="InnerCircle" />
+        </EntityType>
+        <EntityType Name="JournalPrompt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="AddDate" Type="DateTime" Nullable="false" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SecretQuestion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SecretAnswer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ScheduleDate" Type="DateTime" />
+          <Property Name="SentDate" Type="DateTime" />
+          <Property Name="EventScheduleOffsetDays" Type="Int16" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_Message_AppUser" FromRole="Message" ToRole="AppUser" />
+          <NavigationProperty Name="EventType" Relationship="ViternusModel.FK_Message_EventType" FromRole="Message" ToRole="EventType" />
+          <NavigationProperty Name="MessageType" Relationship="ViternusModel.FK_Message_MessageType" FromRole="Message" ToRole="MessageType" />
+          <NavigationProperty Name="Video" Relationship="ViternusModel.FK_Message_Video" FromRole="Message" ToRole="Video" />
+          <NavigationProperty Name="MessageRecipient" Relationship="ViternusModel.FK_MessageRecipient_Message" FromRole="Message" ToRole="MessageRecipient" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="VisitedDate" Type="DateTime" />
+          <NavigationProperty Name="Message" Relationship="ViternusModel.FK_MessageRecipient_Message" FromRole="MessageRecipient" ToRole="Message" />
+          <NavigationProperty Name="Profile" Relationship="ViternusModel.FK_MessageRecipient_Profile" FromRole="MessageRecipient" ToRole="Profile" />
+        </EntityType>
+        <EntityType Name="MessageType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Message" Relationship="ViternusModel.FK_Message_MessageType" FromRole="MessageType" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UserNotified" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_Notification_AppUser" FromRole="Notification" ToRole="AppUser" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NickName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailAlternate" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SSN" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+          <Property Name="IncapacitationDate" Type="DateTime" />
+          <Property Name="DeceasedDate" Type="DateTime" />
+          <Property Name="FacebookId" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfTrustees" Type="Int16" />
+          <NavigationProperty Name="Address" Relationship="ViternusModel.FK_Profile_Address" FromRole="Profile" ToRole="Address" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_AppUser_Profile" FromRole="Profile" ToRole="AppUser" />
+          <NavigationProperty Name="InnerCircle" Relationship="ViternusModel.FK_InnerCircle_Profile" FromRole="Profile" ToRole="InnerCircle" />
+          <NavigationProperty Name="MessageRecipient" Relationship="ViternusModel.FK_MessageRecipient_Profile" FromRole="Profile" ToRole="MessageRecipient" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.AppUserRole" FromRole="Role" ToRole="AppUser" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ProspectName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Feedback" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Path" Type="String" MaxLength="600" Unicode="false" FixedLength="false" />
+          <Property Name="ThumbnailPath" Type="String" MaxLength="600" Unicode="false" FixedLength="false" />
+          <Property Name="StartProcessingDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" />
+          <Property Name="UploadSize" Type="Int64" />
+          <Property Name="FinalSize" Type="Int64" />
+          <Property Name="OriginalFileFormat" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AppUser" Relationship="ViternusModel.FK_Video_AppUser" FromRole="Video" ToRole="AppUser" />
+          <NavigationProperty Name="Message" Relationship="ViternusModel.FK_Message_Video" FromRole="Video" ToRole="Message" />
+        </EntityType>
+        <Association Name="FK_Profile_Address">
+          <End Role="Address" Type="ViternusModel.Address" Multiplicity="0..1" />
+          <End Role="Profile" Type="ViternusModel.Profile" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_AppUser_Profile">
+          <End Role="Profile" Type="ViternusModel.Profile" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_ErrorLog_AppUser">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="0..1" />
+          <End Role="ErrorLog" Type="ViternusModel.ErrorLog" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_InnerCircle_AppUser">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircle" Type="ViternusModel.InnerCircle" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Message_AppUser">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="1" />
+          <End Role="Message" Type="ViternusModel.Message" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Notification_AppUser">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Notification" Type="ViternusModel.Notification" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Video_AppUser">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Video" Type="ViternusModel.Video" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_InnerCircleAction_EventType">
+          <End Role="EventType" Type="ViternusModel.EventType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircleAction" Type="ViternusModel.InnerCircleAction" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Message_EventType">
+          <End Role="EventType" Type="ViternusModel.EventType" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Message" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_InnerCircle_Profile">
+          <End Role="Profile" Type="ViternusModel.Profile" Multiplicity="1" />
+          <End Role="InnerCircle" Type="ViternusModel.InnerCircle" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_InnerCircleAction_InnerCircle">
+          <End Role="InnerCircle" Type="ViternusModel.InnerCircle" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InnerCircleAction" Type="ViternusModel.InnerCircleAction" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Message_MessageType">
+          <End Role="MessageType" Type="ViternusModel.MessageType" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Message" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Message_Video">
+          <End Role="Video" Type="ViternusModel.Video" Multiplicity="0..1" />
+          <End Role="Message" Type="ViternusModel.Message" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="ViternusModel.Message" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageRecipient" Type="ViternusModel.MessageRecipient" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_MessageRecipient_Profile">
+          <End Role="Profile" Type="ViternusModel.Profile" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MessageRecipient" Type="ViternusModel.MessageRecipient" Multiplicity="*" />
+        </Association>
+        <Association Name="AppUserRole">
+          <End Role="AppUser" Type="ViternusModel.AppUser" Multiplicity="*" />
+          <End Role="Role" Type="ViternusModel.Role" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="ViternusModelStoreContainer" CdmEntityContainer="ViternusEntities">
+          <EntitySetMapping Name="Address"><EntityTypeMapping TypeName="ViternusModel.Address"><MappingFragment StoreEntitySet="Address">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="StreetLine1" ColumnName="StreetLine1" />
+            <ScalarProperty Name="StreetLine2" ColumnName="StreetLine2" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="Zip" ColumnName="Zip" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AppUser"><EntityTypeMapping TypeName="ViternusModel.AppUser"><MappingFragment StoreEntitySet="AppUser">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+            <ScalarProperty Name="MobilePin" ColumnName="MobilePin" />
+            <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+            <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+            <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+            <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+            <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+            <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+            <ScalarProperty Name="AgreedToTOS" ColumnName="AgreedToTOS" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="LastLogOnDate" ColumnName="LastLogOnDate" />
+            <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+            <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+            <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAttemptDate" ColumnName="FailedPasswordAttemptDate" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptDate" ColumnName="FailedPasswordAnswerAttemptDate" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ErrorLog"><EntityTypeMapping TypeName="ViternusModel.ErrorLog"><MappingFragment StoreEntitySet="ErrorLog">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+            <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EventType"><EntityTypeMapping TypeName="ViternusModel.EventType"><MappingFragment StoreEntitySet="EventType">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="InnerCircle"><EntityTypeMapping TypeName="ViternusModel.InnerCircle"><MappingFragment StoreEntitySet="InnerCircle">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="NotificationSentDate" ColumnName="NotificationSentDate" />
+            <ScalarProperty Name="AcceptedResponsibility" ColumnName="AcceptedResponsibility" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="InnerCircleAction"><EntityTypeMapping TypeName="ViternusModel.InnerCircleAction"><MappingFragment StoreEntitySet="InnerCircleAction">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+            <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="JournalPrompt"><EntityTypeMapping TypeName="ViternusModel.JournalPrompt"><MappingFragment StoreEntitySet="JournalPrompt">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+            <ScalarProperty Name="Visible" ColumnName="Visible" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Message"><EntityTypeMapping TypeName="ViternusModel.Message"><MappingFragment StoreEntitySet="Message">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Comments" ColumnName="Comments" />
+            <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+            <ScalarProperty Name="SecretAnswer" ColumnName="SecretAnswer" />
+            <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+            <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+            <ScalarProperty Name="EventScheduleOffsetDays" ColumnName="EventScheduleOffsetDays" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageRecipient"><EntityTypeMapping TypeName="ViternusModel.MessageRecipient"><MappingFragment StoreEntitySet="MessageRecipient">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="VisitedDate" ColumnName="VisitedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageType"><EntityTypeMapping TypeName="ViternusModel.MessageType"><MappingFragment StoreEntitySet="MessageType">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Notification"><EntityTypeMapping TypeName="ViternusModel.Notification"><MappingFragment StoreEntitySet="Notification">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+            <ScalarProperty Name="UserNotified" ColumnName="UserNotified" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Profile"><EntityTypeMapping TypeName="ViternusModel.Profile"><MappingFragment StoreEntitySet="Profile">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="NickName" ColumnName="NickName" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="EmailAlternate" ColumnName="EmailAlternate" />
+            <ScalarProperty Name="SSN" ColumnName="SSN" />
+            <ScalarProperty Name="IncapacitationDate" ColumnName="IncapacitationDate" />
+            <ScalarProperty Name="DeceasedDate" ColumnName="DeceasedDate" />
+            <ScalarProperty Name="FacebookId" ColumnName="FacebookId" />
+            <ScalarProperty Name="NumberOfTrustees" ColumnName="NumberOfTrustees" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Role"><EntityTypeMapping TypeName="ViternusModel.Role"><MappingFragment StoreEntitySet="Role">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Subscription"><EntityTypeMapping TypeName="ViternusModel.Subscription"><MappingFragment StoreEntitySet="Subscription">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ProspectName" ColumnName="ProspectName" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Video"><EntityTypeMapping TypeName="ViternusModel.Video"><MappingFragment StoreEntitySet="Video">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="ThumbnailPath" ColumnName="ThumbnailPath" />
+            <ScalarProperty Name="StartProcessingDate" ColumnName="StartProcessingDate" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="UploadSize" ColumnName="UploadSize" />
+            <ScalarProperty Name="FinalSize" ColumnName="FinalSize" />
+            <ScalarProperty Name="OriginalFileFormat" ColumnName="OriginalFileFormat" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Profile_Address" TypeName="ViternusModel.FK_Profile_Address" StoreEntitySet="Profile">
+            <EndProperty Name="Address">
+              <ScalarProperty Name="Id" ColumnName="AddressId" />
+            </EndProperty>
+            <EndProperty Name="Profile">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <Condition ColumnName="AddressId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_AppUser_Profile" TypeName="ViternusModel.FK_AppUser_Profile" StoreEntitySet="AppUser">
+            <EndProperty Name="Profile">
+              <ScalarProperty Name="Id" ColumnName="ProfileId" />
+            </EndProperty>
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_ErrorLog_AppUser" TypeName="ViternusModel.FK_ErrorLog_AppUser" StoreEntitySet="ErrorLog">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="ErrorLog">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <Condition ColumnName="UserId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_InnerCircle_AppUser" TypeName="ViternusModel.FK_InnerCircle_AppUser" StoreEntitySet="InnerCircle">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="InnerCircle">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Message_AppUser" TypeName="ViternusModel.FK_Message_AppUser" StoreEntitySet="Message">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="FromUserId" />
+            </EndProperty>
+            <EndProperty Name="Message">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Notification_AppUser" TypeName="ViternusModel.FK_Notification_AppUser" StoreEntitySet="Notification">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="Notification">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Video_AppUser" TypeName="ViternusModel.FK_Video_AppUser" StoreEntitySet="Video">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="Video">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_InnerCircleAction_EventType" TypeName="ViternusModel.FK_InnerCircleAction_EventType" StoreEntitySet="InnerCircleAction">
+            <EndProperty Name="EventType">
+              <ScalarProperty Name="Id" ColumnName="EventTypeId" />
+            </EndProperty>
+            <EndProperty Name="InnerCircleAction">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Message_EventType" TypeName="ViternusModel.FK_Message_EventType" StoreEntitySet="Message">
+            <EndProperty Name="EventType">
+              <ScalarProperty Name="Id" ColumnName="EventTypeId" />
+            </EndProperty>
+            <EndProperty Name="Message">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <Condition ColumnName="EventTypeId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_InnerCircle_Profile" TypeName="ViternusModel.FK_InnerCircle_Profile" StoreEntitySet="InnerCircle">
+            <EndProperty Name="Profile">
+              <ScalarProperty Name="Id" ColumnName="TrusteeProfileId" />
+            </EndProperty>
+            <EndProperty Name="InnerCircle">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_InnerCircleAction_InnerCircle" TypeName="ViternusModel.FK_InnerCircleAction_InnerCircle" StoreEntitySet="InnerCircleAction">
+            <EndProperty Name="InnerCircle">
+              <ScalarProperty Name="Id" ColumnName="InnerCircleId" />
+            </EndProperty>
+            <EndProperty Name="InnerCircleAction">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Message_MessageType" TypeName="ViternusModel.FK_Message_MessageType" StoreEntitySet="Message">
+            <EndProperty Name="MessageType">
+              <ScalarProperty Name="Id" ColumnName="MessageTypeId" />
+            </EndProperty>
+            <EndProperty Name="Message">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <Condition ColumnName="MessageTypeId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Message_Video" TypeName="ViternusModel.FK_Message_Video" StoreEntitySet="Message">
+            <EndProperty Name="Video">
+              <ScalarProperty Name="Id" ColumnName="VideoId" />
+            </EndProperty>
+            <EndProperty Name="Message">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <Condition ColumnName="VideoId" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_MessageRecipient_Message" TypeName="ViternusModel.FK_MessageRecipient_Message" StoreEntitySet="MessageRecipient">
+            <EndProperty Name="Message">
+              <ScalarProperty Name="Id" ColumnName="MessageId" />
+            </EndProperty>
+            <EndProperty Name="MessageRecipient">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_MessageRecipient_Profile" TypeName="ViternusModel.FK_MessageRecipient_Profile" StoreEntitySet="MessageRecipient">
+            <EndProperty Name="Profile">
+              <ScalarProperty Name="Id" ColumnName="RecipientId" />
+            </EndProperty>
+            <EndProperty Name="MessageRecipient">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="AppUserRole" TypeName="ViternusModel.AppUserRole" StoreEntitySet="AppUserRole">
+            <EndProperty Name="AppUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="Role">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Viternus">
+        <EntityTypeShape EntityType="ViternusModel.Address" Width="1.5" PointX="0.75" PointY="9.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.AppUser" Width="1.5" PointX="5.25" PointY="7.625" Height="6.5955208333333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.ErrorLog" Width="1.5" PointX="7.5" PointY="5.375" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.EventType" Width="1.5" PointX="7.5" PointY="2" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.InnerCircle" Width="1.5" PointX="7.5" PointY="9.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.InnerCircleAction" Width="1.5" PointX="9.75" PointY="9.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.JournalPrompt" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Message" Width="1.5" PointX="9.75" PointY="13.875" Height="3.5186979166666692" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.MessageRecipient" Width="1.5" PointX="12" PointY="12.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.MessageType" Width="1.5" PointX="7.5" PointY="12.875" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Notification" Width="1.5" PointX="7.5" PointY="15.25" Height="1.9802864583333371" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Profile" Width="1.5" PointX="3" PointY="9" Height="3.9033007812500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Role" Width="1.5" PointX="7.5" PointY="18" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Subscription" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViternusModel.Video" Width="1.5" PointX="7.5" PointY="20.5" Height="3.1340950520833388" IsExpanded="true" />
+        <AssociationConnector Association="ViternusModel.FK_Profile_Address" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.932444661458334" />
+          <ConnectorPoint PointX="3" PointY="10.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_AppUser_Profile" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.951650390625002" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="10.951650390625002" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="10.951650390625002" />
+          <ConnectorPoint PointX="5.25" PointY="10.951650390625002" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_ErrorLog_AppUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="7.625" />
+          <ConnectorPoint PointX="6" PointY="6.3651432291666667" />
+          <ConnectorPoint PointX="7.5" PointY="6.3651432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_InnerCircle_AppUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="10.9612939453125" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="10.9612939453125" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="10.9612939453125" />
+          <ConnectorPoint PointX="7.5" PointY="10.9612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Message_AppUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="14.220520833333332" />
+          <ConnectorPoint PointX="6" PointY="14.860341796875" />
+          <ConnectorPoint PointX="6.3229191666666669" PointY="14.860341796875" />
+          <ConnectorPoint PointX="6.4895858333333329" PointY="14.860341796875" />
+          <ConnectorPoint PointX="6.5260454166666664" PointY="14.860341796875" />
+          <ConnectorPoint PointX="6.6927120833333325" PointY="14.860341796875" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="14.860341796875" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="14.860341796875" />
+          <ConnectorPoint PointX="9.75" PointY="14.860341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Notification_AppUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.4062525" PointY="14.220520833333332" />
+          <ConnectorPoint PointX="6.4062525" PointY="16.240143229166669" />
+          <ConnectorPoint PointX="6.5260454166666664" PointY="16.240143229166669" />
+          <ConnectorPoint PointX="6.6927120833333325" PointY="16.240143229166669" />
+          <ConnectorPoint PointX="7.5" PointY="16.240143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Video_AppUser" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.5937475" PointY="14.220520833333332" />
+          <ConnectorPoint PointX="5.5937475" PointY="22.067047526041669" />
+          <ConnectorPoint PointX="7.5" PointY="22.067047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_InnerCircleAction_EventType" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="2.8939925130208328" />
+          <ConnectorPoint PointX="10.5" PointY="2.8939925130208328" />
+          <ConnectorPoint PointX="10.5" PointY="9.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Message_EventType" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="3.7868301798878194" />
+          <ConnectorPoint PointX="9.375" PointY="4.1618301798878194" />
+          <ConnectorPoint PointX="9.375" PointY="16.158271856770835" />
+          <ConnectorPoint PointX="9.75" PointY="16.158271856770835" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_InnerCircle_Profile" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="12.903300781250003" />
+          <ConnectorPoint PointX="3.75" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="5.5104141666666671" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="5.6770808333333331" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="6.3229191666666669" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="6.4895858333333329" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="6.5260454166666664" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="6.6927120833333325" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="7.125" PointY="14.470520833333332" />
+          <ConnectorPoint PointX="7.125" PointY="10.386894972656249" />
+          <ConnectorPoint PointX="7.5" PointY="10.386894972656249" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_InnerCircleAction_InnerCircle" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="10.865143229166666" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="10.865143229166666" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="10.865143229166666" />
+          <ConnectorPoint PointX="9.75" PointY="10.865143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Message_MessageType" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="14.172841796875" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="14.172841796875" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="14.172841796875" />
+          <ConnectorPoint PointX="9.75" PointY="14.172841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_Message_Video" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="22.067047526041669" />
+          <ConnectorPoint PointX="10.5" PointY="22.067047526041669" />
+          <ConnectorPoint PointX="10.5" PointY="17.393697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_MessageRecipient_Message" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="15.715841971354166" />
+          <ConnectorPoint PointX="12.75" PointY="15.715841971354166" />
+          <ConnectorPoint PointX="12.75" PointY="14.037985026041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.FK_MessageRecipient_Profile" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="9" />
+          <ConnectorPoint PointX="3.75" PointY="8.75" />
+          <ConnectorPoint PointX="5" PointY="8.75" />
+          <ConnectorPoint PointX="5" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="5.5104141666666671" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="5.6770808333333331" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="6.3229191666666669" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="6.4895858333333329" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="6.5260454166666664" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="6.6927120833333325" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="7.25" PointY="14.595520833333332" />
+          <ConnectorPoint PointX="7.25" PointY="12.625" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="12.625" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="12.625" />
+          <ConnectorPoint PointX="11.625" PointY="12.625" />
+          <ConnectorPoint PointX="11.625" PointY="13.143992513020834" />
+          <ConnectorPoint PointX="12" PointY="13.143992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ViternusModel.AppUserRole" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.6093787499999994" PointY="14.220520833333332" />
+          <ConnectorPoint PointX="6.6093787499999994" PointY="18.893992513020834" />
+          <ConnectorPoint PointX="7.5" PointY="18.893992513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

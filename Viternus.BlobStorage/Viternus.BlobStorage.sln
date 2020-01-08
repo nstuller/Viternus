@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Viternus.BlobStorage", "Viternus.BlobStorage\Viternus.BlobStorage.ccproj", "{03AE58ED-34A8-49D3-BE74-6B1232F27820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole1", "WebRole1\WebRole1.csproj", "{DD84774C-144B-4C96-A958-267994583979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageClient", "..\..\Samples\AzureSamples\StorageClient\Lib\StorageClient.csproj", "{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\Samples\AzureSamples\HelloFabric\Common\Common.csproj", "{2F79F72B-E48C-4061-879D-02AC52F85AA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03AE58ED-34A8-49D3-BE74-6B1232F27820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AE58ED-34A8-49D3-BE74-6B1232F27820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AE58ED-34A8-49D3-BE74-6B1232F27820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AE58ED-34A8-49D3-BE74-6B1232F27820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD84774C-144B-4C96-A958-267994583979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD84774C-144B-4C96-A958-267994583979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD84774C-144B-4C96-A958-267994583979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD84774C-144B-4C96-A958-267994583979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F30C10-E1C2-4327-BB6B-3160B479CCA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F79F72B-E48C-4061-879D-02AC52F85AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F79F72B-E48C-4061-879D-02AC52F85AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F79F72B-E48C-4061-879D-02AC52F85AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F79F72B-E48C-4061-879D-02AC52F85AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
